@@ -9,7 +9,6 @@ from gym_toy.envs.pendulum_sparse import PendulumSparseEnv
 
 from gym_toy.envs.sparse_grid import SparseGridEnv
 from gym_toy.envs.sparse_2d import Sparse2DSmallEnv, Sparse2DBigEnv
-from gym_toy.envs.sparse_2d_continuous import Sparse2DContinuousEnv
 
 from gym_toy.envs.random_switch import RandSwitchEnv
 from gym_toy.envs.dig import DigEnv

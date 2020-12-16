@@ -32,12 +32,6 @@ register(
 )
 
 register(
-    id='Sparse2DContinuous-v0',
-    entry_point='gym_toy.envs:Sparse2DContinuousEnv',
-    max_episode_steps=100,
-)
-
-register(
     id='PendulumSparse-v0',
     entry_point='gym_toy.envs:PendulumSparseEnv',
     max_episode_steps=200,
