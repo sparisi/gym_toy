@@ -15,7 +15,9 @@ Observations and reward are normalized in [-1,1].
 
 class SparseGridEnv(gym.Env):
 
-    def __init__(self, n=4):
+    def __init__(self, n=4, inf_hor=False):
+        self.inf_hor = inf_hor
+
         # Notice that size will be (n+1).
         self.action_space = spaces.Discrete(4)
         self.observation_space = spaces.Box(low=-1, high=1, shape=(2,), dtype=np.float32)
@@ -43,7 +45,7 @@ class SparseGridEnv(gym.Env):
         done = False
         if self.state[0] == self.n and self.state[1] == self.n:
             reward = 1
-            done = True
+            done = not self.inf_hor
 
         if action == 0:
             if self.state[1] > 0:
